@@ -23,7 +23,8 @@ function App() {
     //     text3.innerHTML = "click 3 activated";
     // }
     //
-    // same function as above with useState
+
+    // Click Event Exercise with useState
     const [number, setNum] = useState("*");
     const message1 = () => {
         setNum("1");
@@ -49,6 +50,7 @@ function App() {
               <h1>Hello React</h1>
           </header>
           <body className="App-body">
+          {/*Click Event Exercise*/}
           <div className="clickEventExercise">
               <h1>Click Event Exercise</h1>
               <p id="messageText">click {number} activated</p>
@@ -59,6 +61,7 @@ function App() {
               </nav>
           </div>
           <hr/>
+          {/*Object Output Exercise*/}
           <div className="objectOutputExercise">
               <h1>Object Output Exercise</h1>
               {cars.map((car) => (
@@ -66,7 +69,6 @@ function App() {
                       <h3>{car.year}</h3>
                       <h4>{car.make}</h4>
                       <h5>{car.color}</h5>
-                      <p>--------------------------------------</p>
                   </div>
               ))}
           </div>
