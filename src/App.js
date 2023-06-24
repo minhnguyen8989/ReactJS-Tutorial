@@ -21,6 +21,7 @@ function App() {
     //     text3.innerHTML = "click 3 activated";
     // }
 
+    // same function as above with useState
     const [number, setNum] = useState("*");
     const message1 = () => {
         setNum("1");
