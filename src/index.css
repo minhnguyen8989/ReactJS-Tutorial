@@ -5,10 +5,25 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #e36868;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+hr {
+  border: 1px solid black;
+  width: 100%;
+}
+button {
+  margin: 5px;
+}
+
+.car-preview:hover {
+  box-shadow: 1px 3px 5px rgba(2, 2, 2, 0.1);
+}
+
+.car-preview {
+  background-color: rgba(100, 149, 237, 0.38);
 }
