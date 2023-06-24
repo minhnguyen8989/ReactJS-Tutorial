@@ -1,24 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
 
 function App() {
+    // function type 1
+    const message1 = function () {
+        console.log("click 1 activated");
+        let text1 = document.getElementById("messageText");
+        text1.innerHTML = "click 1 activated";
+    }
+    // function type 2
+    const message2 = () => {
+        console.log("click 2 activated")
+        let text2 = document.getElementById("messageText");
+        text2.innerHTML = "click 2 activated";
+    }
+    // function type 3
+    const message3 = () => {
+        console.log("Click 3 activated");
+        let text3 = document.getElementById("messageText");
+        text3.innerHTML = "click 3 activated";
+    }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+          <header className="App-header">
+              <h1>Hello React</h1>
+          </header>
+          <body className="App-body">
+            <h1>Logo</h1>
+            <p id="messageText">Message will be display</p>
+            <nav>
+                <button onClick={message1}>Click 1</button>
+                <button onClick={message2}>Click 2</button>
+                <button onClick={message3}>Click 3</button>
+            </nav>
+          </body>
+          <footer className="App-footer">
+              <h4>Thank you</h4>
+          </footer>
+      </div>
   );
 }
 
