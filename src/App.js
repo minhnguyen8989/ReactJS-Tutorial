@@ -1,5 +1,6 @@
 import './App.css';
 import { useState } from "react";
+import CarList from './CarList';
 
 function App() {
     // Click Event Exercise
@@ -61,18 +62,7 @@ function App() {
               </nav>
           </div>
           <hr/>
-          {/*Object Output Exercise*/}
-          <div className="objectOutputExercise">
-              <h1>Object Output Exercise</h1>
-              {cars.map((car) => (
-                  <div className="car-preview" key={car.id}>
-                      <h3>{car.year}</h3>
-                      <h4>{car.make}</h4>
-                      <h5>{car.color}</h5>
-                  </div>
-              ))}
-          </div>
-          <hr/>
+          <CarList cars={cars} />
           </body>
       </div>
   );

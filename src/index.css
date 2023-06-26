@@ -26,4 +26,5 @@ button {
 
 .car-preview {
   background-color: rgba(100, 149, 237, 0.38);
+  border-radius: 15%;
 }
