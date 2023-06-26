@@ -47,6 +47,12 @@ function App() {
         {year: "2019", make: "Honda", color: "Blue", id: 6}
     ]);
 
+    //Delete button function in CarList.js
+    const handleDelete = (id) => {
+        const newCars = cars.filter(car => car.id !== id);
+        setCars(newCars);
+    }
+
 
   return (
       <div className="App">
@@ -66,8 +72,8 @@ function App() {
           </div>
           <hr/>
           {/*Working with props Carlist.js*/}
-          <CarList cars={cars} title="Object Output Exercise " />
-          <CarList cars={cars.filter((car) => car.make === "Honda")} title="Working with .filter (Honda)" />
+          <CarList cars={cars} title="Object Output Exercise" handleDelete={handleDelete} />
+          <CarList cars={cars.filter((car) => car.make === "Honda")} title="Working with .filter (Honda)"  handleDelete={handleDelete} />
           </body>
       </div>
   );
