@@ -41,7 +41,10 @@ function App() {
     const [cars, setCars] = useState([
         {year: "2012", make: "Toyota", color: "White", id: 1},
         {year: "2020", make: "Honda", color: "Black", id: 2},
-        {year: "2021", make: "Mazda", color: "Blue", id: 3}
+        {year: "2021", make: "Mazda", color: "Blue", id: 3},
+        {year: "2012", make: "Honda", color: "Grey", id: 4},
+        {year: "2023", make: "Honda", color: "White", id: 5},
+        {year: "2019", make: "Honda", color: "Blue", id: 6}
     ]);
 
 
@@ -64,6 +67,7 @@ function App() {
           <hr/>
           {/*Working with props Carlist.js*/}
           <CarList cars={cars} title="Object Output Exercise " />
+          <CarList cars={cars.filter((car) => car.make === "Honda")} title="Working with .filter (Honda)" />
           </body>
       </div>
   );
