@@ -41,8 +41,17 @@ function App() {
     const [cars, setCars] = useState([
         {year: "2012", make: "Toyota", color: "White", id: 1},
         {year: "2020", make: "Honda", color: "Black", id: 2},
-        {year: "2021", make: "Mazda", color: "Blue", id: 3}
+        {year: "2021", make: "Mazda", color: "Blue", id: 3},
+        {year: "2012", make: "Honda", color: "Grey", id: 4},
+        {year: "2023", make: "Honda", color: "White", id: 5},
+        {year: "2019", make: "Honda", color: "Blue", id: 6}
     ]);
+
+    //Delete button function in CarList.js
+    const handleDelete = (id) => {
+        const newCars = cars.filter(car => car.id !== id);
+        setCars(newCars);
+    }
 
 
   return (
@@ -63,7 +72,8 @@ function App() {
           </div>
           <hr/>
           {/*Working with props Carlist.js*/}
-          <CarList cars={cars} title="Object Output Exercise " />
+          <CarList cars={cars} title="Object Output Exercise" handleDelete={handleDelete} />
+          <CarList cars={cars.filter((car) => car.make === "Honda")} title="Working with .filter (Honda)"  handleDelete={handleDelete} />
           </body>
       </div>
   );
