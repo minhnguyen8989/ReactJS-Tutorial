@@ -62,7 +62,8 @@ function App() {
               </nav>
           </div>
           <hr/>
-          <CarList cars={cars} />
+          {/*Working with props Carlist.js*/}
+          <CarList cars={cars} title="Object Output Exercise " />
           </body>
       </div>
   );

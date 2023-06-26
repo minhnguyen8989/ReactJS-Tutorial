@@ -1,10 +1,12 @@
 
 const CarList = (props) => {
     const cars = props.cars;
+    const title = props.title;
 
     return (
+        // ObjectOutputExercise
     <div className="objectOutputExercise">
-        <h1>Object Output Exercise</h1>
+        <h1> { title }</h1>
         {cars.map((car) => (
             <div className="car-preview" key={car.id}>
                 <h3>{car.year}</h3>
