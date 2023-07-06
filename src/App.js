@@ -1,5 +1,5 @@
 import './App.css';
-import { useState } from "react";
+import {useEffect, useState} from "react";
 import CarList from './CarList';
 
 function App() {
@@ -42,7 +42,7 @@ function App() {
         {year: "2012", make: "Toyota", color: "White", id: 1},
         {year: "2020", make: "Honda", color: "Black", id: 2},
         {year: "2021", make: "Mazda", color: "Blue", id: 3},
-        {year: "2012", make: "Honda", color: "Grey", id: 4},
+        {year: "2012", make: "Kia", color: "Grey", id: 4},
         {year: "2023", make: "Honda", color: "White", id: 5},
         {year: "2019", make: "Honda", color: "Blue", id: 6}
     ]);
@@ -52,6 +52,13 @@ function App() {
         const newCars = cars.filter(car => car.id !== id);
         setCars(newCars);
     }
+
+    // Working with useEffect and fetch Json
+    useEffect( () => {
+        console.log("effect ran");
+        console.log(cars);
+        }, []
+    );
 
 
   return (
@@ -74,6 +81,7 @@ function App() {
           {/*Working with props Carlist.js*/}
           <CarList cars={cars} title="Object Output Exercise" handleDelete={handleDelete} />
           <CarList cars={cars.filter((car) => car.make === "Honda")} title="Working with .filter (Honda)"  handleDelete={handleDelete} />
+
           </body>
       </div>
   );
