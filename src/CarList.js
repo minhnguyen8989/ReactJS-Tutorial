@@ -17,7 +17,6 @@ const CarList = ({cars, title, handleDelete}) => {
                 <button onClick={() => handleDelete(car.id)}>Delete this post</button>
             </div>
             ))}
-
     </div>
     );
 }
